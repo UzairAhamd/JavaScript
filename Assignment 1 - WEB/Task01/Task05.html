@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Task05</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+    <style>
+        #demo{
+            color: red;
+        }
+    </style>
+    <p><button onclick="myFunction()">Change</button></p>
+
+<div id="demo">Text to be changed</div>
+
+<script>
+function myFunction() {
+  promt = document.getElementById("demo");
+  if (promt.innerHTML === "Text to be changed") {
+    promt.innerHTML = "Text is changed";
+  } else {
+    promt.innerHTML = "Text to be changed";
+  }
+}
+</script>
+</body>
+</html>
+

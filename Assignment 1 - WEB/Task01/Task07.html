@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Task07</title>
+	<meta name="viewport"content="width=device-width, initial-scale=1.0">
+    <style>
+    button1
+    {
+      background-color: #041daa;
+      color: white;
+      padding: 5px ;
+      margin: 10px 0;
+      border: none;
+      cursor: pointer;
+      width: 10%;
+      opacity: .8;
+      text-size-adjust: 10px;
+    }
+    button2 
+    {
+      background-color: #db2620;
+      color: white;
+      padding: 5px ;
+      margin: 10px 0;
+      border: none;
+      cursor: pointer;
+      width: 10%;
+      opacity: .8;
+      text-size-adjust: 10px;
+    }
+    </style>
+
+</head>
+<body>
+    <input id="first" value="0"><br><br>
+    <button1 onclick="add()">Add</button1>
+    <button2 onclick="sub()">Sub</button2>
+    <script>
+        function add()
+        {
+            var a;
+            a=Number(document.getElementById("first").value);
+            a++;
+            document.getElementById("first").value= a;
+        }
+        function sub()
+        {
+            var a;
+            a=Number(document.getElementById("first").value);
+            a--;
+            document.getElementById("first").value= a;
+        }
+    </script>
+        
+</body>
+</html>

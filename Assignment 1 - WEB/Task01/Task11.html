@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Task11</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <h1>Tax Calculator</h1>
+        <label for="mAftSalary">Monthly Salary</label>
+        <input type="text" id="mAftSalary" style="margin-left: 80px;" oninput="TaxCalculator(this.id)">
+        <p>Monthly Taxable Amount : 
+            <span id="mTax" style="border:1px solid #000; margin-left: 10px; padding: 1px 87px;">
+            </span></p>
+        <p>Monthly Salary After tax : <span id="mSalary" style="border:1px solid #000; margin-left: 14px; padding: 1px 88px;">
+            </span></p>
+        <p>Yearly Tax : <span id="yTax" style="border:1px solid #000; margin-left: 105px; padding: 1px 88px;">
+            </span></p>
+        <p>Yearly Income After Tax : <span id="yIncome" style="border:1px solid #000; margin-left: 16px; padding: 1px 88px;">
+            </span></p>
+    <script>
+        function TaxCalculator() {
+            var mTax = 0;
+            var mAftSalary = 0;
+            var yTax = 0;
+            var yAftSalary = 0;
+            var mSalary = document.getElementById('mAftSalary').value;
+            var ySalary = mSalary * 12;
+            if (mSalary == "" || mSalary<0) {
+                mTax = 0;
+                mAftSalary = 0;
+                yAftSalary = 0;
+                yTax= 0;
+            }
+            else if (ySalary <= 600000) {
+                mAftSalary = mSalary;
+                yAftSalary = ySalary;
+                mTax = 0;
+                yTax= 0;
+            }
+            else if (ySalary > 600000 && ySalary <= 1200000) {
+                yTax = (ySalary - 600000) * 0.025;
+                mTax = yTax / 12;
+                yAftSalary = ySalary - yTax;
+                mAftSalary = mSalary - mTax;
+            }
+            else if (ySalary > 1200000 && ySalary <= 2400000) {
+                yTax = (ySalary - 1200000) * 0.125 + 15000;
+                mTax = yTax / 12;
+                yAftSalary = ySalary - yTax;
+                mAftSalary = mSalary - mTax;
+            }
+            else if (ySalary > 2400000 && ySalary <= 3600000) {
+                yTax = (ySalary - 2400000) * 0.2 + 165000;
+                mTax = yTax / 12;
+                yAftSalary = ySalary - yTax;
+                mAftSalary = mSalary - mTax;
+            }
+            else if (ySalary > 3600000 && ySalary <= 6000000) {
+                yTax = (ySalary - 3600000) * 0.25 + 405000;
+                mTax = yTax / 12;
+                yAftSalary = ySalary - yTax;
+                mAftSalary = mSalary - mTax;
+            }
+            else if (ySalary > 6000000 && ySalary <= 12000000) {
+                yTax = (ySalary - 6000000) * 0.325 + 1005000;
+                mTax = yTax / 12;
+                yAftSalary = ySalary - yTax;
+                mAftSalary = mSalary - mTax;
+            }
+            else if (ySalary > 12000000) {
+                yTax = (ySalary - 12000000) * 0.35 + 2955000;
+                mTax = yTax / 12;
+                yAftSalary = ySalary - yTax;
+                mAftSalary = mSalary - mTax;
+            }
+            document.getElementById('mTax').innerHTML = mTax;
+            document.getElementById('mSalary').innerHTML = mAftSalary;
+            document.getElementById('yTax').innerHTML = yTax;
+            document.getElementById('yIncome').innerHTML = yAftSalary;
+        }
+
+
+    </script>
+
+</body>
+
+</html>

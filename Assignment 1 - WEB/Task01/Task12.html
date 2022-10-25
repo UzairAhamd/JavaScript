@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Task12</title>
+</head>
+
+<body>
+    <h1>Loin Page</h1>
+        <p><span id="error"></span></p>
+        <label for="name">User name</label><br>
+        <input type="text" id="name"><br><br>
+        <label type="pass">Password</label><br>
+        <input type="password" id="pass"><br><br>
+        <button onclick="window.location.href=errorGen()">Login</button>
+    <script>
+        var userName="Enna holt"
+        var password="NoEcho1999"
+        function errorGen(){
+            let name=document.getElementById('name').value;
+            let pass=document.getElementById('pass').value;
+            if(name==="Enna holt" && pass==="NoEcho1999"){
+                return "Task12B.html"
+            }
+            else{
+                document.getElementById('error').innerHTML='Username/password is incorrect';
+                return none;
+            }
+            
+        }
+    </script>
+    
+</body>
+</html>

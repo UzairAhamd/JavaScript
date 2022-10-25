@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Task09</title>
+    <link rel="stylesheet" href="Task08.css">
+</head>
+<body>
+    <label for="first">Enter text:</label><br>
+    <input type="text" id="first" onkeyup="countChars(this)"><br>
+    <p>Entered number of characters are: 
+        <span id="charNum" style="border:1px solid #000; margin-left: 10px; padding: 2px 30px;"></span>
+    </p>
+    <script>
+    function countChars(string){
+        document.getElementById("charNum").innerHTML = string.value.length;
+    }
+    </script>
+</body>
+</html>

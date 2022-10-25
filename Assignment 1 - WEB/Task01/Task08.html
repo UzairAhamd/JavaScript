@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Task08</title>
+    <link rel="stylesheet" href="Task08.css">
+</head>
+<body>
+    <h1>Name Fomat</h1>
+    <label for="first">First Name</label><br>
+    <input type="text" id="first"><br><br>
+    <label for="last">Last Name</label><br>
+    <input type="text" id="last"><br><br>
+    <label for="form">Select Format</label><br>
+    <select id="format">
+        <option value="first_name">First Name, Last Name</option>
+        <option value="last_name">Last Name, First Name</option>
+    </select><br><br>
+    <button onclick="formated('format','first','last')">Format Name</button>
+    <p>Formated name: <span id="formated_name"></span></p>
+    <script>
+        function formated(selection,first,last){
+            select = document.getElementById(selection);
+            value = select.options[select.selectedIndex].value;
+            fl=document.getElementById(first).value;
+            lf=document.getElementById(last).value;
+            if(value==="first_name"){
+                document.getElementById('formated_name').innerHTML=fl+" "+lf;
+            }
+            else if(value==="last_name"){
+                document.getElementById('formated_name').innerHTML=lf+" "+fl;
+            }
+        }
+    </script>
+</body>
+</html>
