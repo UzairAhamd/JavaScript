@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Task05</title>
+</head>
+<body>
+    <h1>Toggling a Text</h1>
+    <p id="demo">Hello JavaSript!</p>
+
+    <button onclick="myFunction()">Click me!</button>
+    <script>
+        function myFunction(){
+            let x=document.getElementById('demo');
+            if(x.innerHTML==="Hello JavaScript!"){
+                x.innerHTML="Welcome to CUREMD...";
+            }
+            else{
+                x.innerHTML="Hello JavaScript!";
+            }
+        }
+    </script>
+</body>
+</html>

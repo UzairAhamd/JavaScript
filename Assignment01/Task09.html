@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Task09</title>
+    <link rel="stylesheet" href="Task09.css">
+</head>
+
+<body>
+  
+    <div id="formater">
+        <h1>Character Counter</h1>
+    </div>
+    <div id="display">
+        <label for="name">Input text</label>
+        <input type="text" id="name">
+        <button onclick="document.getElementById('res').innerHTML=counter()">Count</button>
+        <p>Number of character in input : <span id="res"></span></p>
+    </div>
+    <script>
+        var count=0;
+        function counter(){
+            let inpTxt=document.getElementById('name').value;
+            for(chr in inpTxt){
+                if(chr===" "){
+                    continue;
+                }
+                count++;
+            } 
+            return count;
+        }
+        
+    </script>
+    
+</body>
+</html>
