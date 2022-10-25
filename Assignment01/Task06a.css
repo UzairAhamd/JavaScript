@@ -1,25 +1,29 @@
 .heading{
     margin: 0px auto;
-    max-width: 400px;
-    text-align: center;
+    max-width: 600px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: x-large;
 }
 form{
     margin: 0px auto;
-    max-width: 400px;
+    max-width: 600px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 form label{
     display: block;
-    margin: 10px auto;
+    margin: 20px auto;
+    font-size: x-large;
 }
 form input{
     width: 100%;
-    height: 30px;
+    height: 50px;
+    border-radius: 6px;
+    font-size: larger;
 }
 form select{
     width: 100%;
-    height: 30px;
+    height: 50px;
+    border-radius: 6px;
 }
 form button{
     margin-top: 20px;
@@ -31,8 +35,13 @@ form button{
     border-radius: 4px;
 }
 form textarea{
+    clear:left;
     width: 100%;
+    border-radius: 6px;
 }
-form input[type="checkbox"] label{
+.lbl{
+    margin-left: 10px;
+    width: 30px;
+    height: 20px;
     display: inline;
 }

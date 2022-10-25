@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <title>Task11</title>
     <link rel="stylesheet" href="Task11.css">
 </head>
 
 <body>
-  
+
     <div id="formater">
         <h1>Tax Calculator</h1>
     </div>
@@ -19,20 +20,51 @@
         <p>Yearly Income After Tax : <span id="yIncome"></span></p>
     </div>
     <script>
-        var mTax=0;
-        var mAftSalary=0;
-        var yTax=0;
-        var yAftSalary=0;
-        var mSalary=parseInt(document.getElementById('mAftSalary').value);
-        var ySalary=mSalary*12;
-        if(ySalary<=600000){
-            document.getElementById('mTax').innerHTML=mTax;
-            document.getElementById('mSalary').innerHTML=mTax;
-            document.getElementById('yTax').innerHTML=mTax;
-            document.getElementById('ySalary').innerHTML=mTax;
-        } 
-        
+        var mTax = 0;
+        var mAftSalary = 0;
+        var yTax = 0;
+        var yAftSalary = 0;
+
+        function TaxCalculator() {
+            var mSalary = document.getElementById('mAftSalary').value;
+            var ySalary = mSalary * 12;
+            if (ySalary <= 600000) {
+                mAftSalary = mSalary;
+                yAftSalary = ySalary;
+            }
+            else if (ySalary > 600000 && ySalary <= 1200000) {
+                yTax = (ySalary - 600000) * 0.025;
+            }
+            else if (ySalary > 1200000 && ySalary <= 2400000) {
+                yTax = (ySalary - 1200000) * 0.125 + 15000;
+            }
+            else if (ySalary > 2400000 && ySalary <= 3600000) {
+                yTax = (ySalary - 2400000) * 0.2 + 165000;
+            }
+            else if (ySalary > 3600000 && ySalary <= 6000000) {
+                yTax = (ySalary - 3600000) * 0.25 + 405000;
+            }
+            else if (ySalary > 6000000 && ySalary <= 12000000) {
+                yTax = (ySalary - 6000000) * 0.325 + 1005000;
+            }
+            else if (ySalary > 12000000) {
+                yTax = (ySalary - 12000000) * 0.35 + 2955000;
+            }
+
+            mTax = yTax / 12;
+            yAftSalary = ySalary - yTax;
+            mAftSalary = mSalary - mTax;
+
+
+            document.getElementById('mTax').innerHTML = mTax;
+            document.getElementById('mSalary').innerHTML = mAftSalary;
+            document.getElementById('yTax').innerHTML = yTax;
+            document.getElementById('yIncome').innerHTML = yAftSalary;
+        }
+
+
     </script>
-    
+
 </body>
+
 </html>
