@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Task14 </title>
+        <meta name="viewport" content="width=device-width. initial-scale=1.0">
+        <script src="https://ajax/googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script>
+            $(document).ready(function(){
+              $("#buttonappend").click(function(){
+                    $('#mainDiv').append("<p>Append<p>")
+              });          
+            });
+        </script>
+        <style>
+            body{
+                font-family: calibri;
+            }
+            button{
+                background-color:rgb(179, 21, 21) ;
+                color:white; 
+                font-size: 20px;
+                  padding: 15px 20px;
+                   border: none;
+                    border-radius: 10px;
+            }
+            button2{
+                background-color:rgb(250, 205, 7) ;
+                color:rgb(0, 0, 0); 
+                 font-size: 20px;
+                  padding: 15px 20px;
+                   border: none;
+                    border-radius: 10px;
+            }
+            button3{
+                background-color:rgb(15, 138, 80) ;
+                color:white; 
+                font-size: 20px;
+                  padding: 15px 20px;
+                   border: none;
+                    border-radius: 10px;
+            }
+            button4{
+                background-color:rgb(7, 153, 250) ;
+                color:rgb(255, 255, 255); 
+                 font-size: 20px;
+                  padding: 15px 20px;
+                   border: none;
+                    border-radius: 10px;
+            }
+        </style>
+        <body>
+            <span>
+                <button id="append" >Append</button>
+                <button2 id="before" >Before</button2>
+                <button3 id="after" >After</button3>
+                <button4 id="prepend" >Prepend</button4>
+            </span>
+            <div id="mainDiv" style="padding: 20px;">
+            <p>This is the main Div</p>
+            </div>
+        </body>
+    </head>
+</html>
