@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>Task10</title>
+    <link rel="stylesheet" href="Task10.css">
+</head>
+
+<body>
+    <div class="form1">
+        <div class="heading">
+            <h1>Fill your interests</h1>
+            <p>
+                shadgxyw ashcvhjwg ashcghwq acghq jhqcg
+                aschvwhq asjhcv ajhscv jhasbvc jhcgh hc
+            </p>
+        </div>
+
+        <div class="form2">
+            <label for="name">Name</label>
+            <input type="text" id="name">
+            <p id="nErr"></p>
+            <label for="email">Email</label>
+            <input type="email" id="email">
+            <p id="mErr"></p>
+            <label for="dob">DOB</label>
+            <input type="date" id="dob">
+            <p id="dErr"></p>
+            <label for="sel">Select your University</label>
+            <select id="sel">
+                <option value="" disabled selected hidden>-select-</option>
+                <option>UET</option>
+                <option>LUMS</option>
+                <option>FAST</option>
+                <option>NUST</option>
+            </select>
+            <p id="sErr"></p>
+            <label>Select workspace</label>
+            <input type="checkbox" id="check" class="lbl">
+            <label for="check" class="lbl">Individual</label>
+            <input type="checkbox" id="check" class="lbl">
+            <label for="check" class="lbl">Organization</label>
+
+            <label for="tarea">About You</label>
+            <textarea id="tarea" cols="30" rows="10"></textarea>
+            <button onclick="ErrorGen()">Send Details</button>
+        </div>
+    </div>
+    <script>
+        function ErrorGen() {
+            let inpName = document.getElementById('name').value;
+            let inpMail = document.getElementById('email').value;
+            let inpDob = document.getElementById('dob').value;
+            let inpSel = document.getElementById('sel').value;
+            let date=new Date(inpDob);
+            let year=date.getFullYear();
+            let age=2022-year;
+            let checkMail=true;
+            
+            for(let i=0;i<inpMail.length-1;i++){
+                if(inpMail[i]==='@')
+                {
+                    if(i+1>!inpMail.length-1&&i-1<!0 && i+1===' '&&i-1===' ')
+                    {
+                        checkMail=false;
+                    }
+                }
+            }
+            console.log(checkMail);
+            try {
+                if (inpName.length > 50) throw "Character Limit Exceeds!"
+                else if (inpName == "") throw "Name cannot be empty"
+                else if (inpName.length <= 50 && inpName.length >0) throw ""
+            }
+            catch (err) {
+                document.getElementById('nErr').innerHTML = err;
+            }
+            try {
+                if (inpMail == "") throw "Email cannot be empty"
+                if (checkMail) throw "Invalid email!"
+                if (inpMail != "") throw ""
+            }
+            catch (err) {
+                document.getElementById('mErr').innerHTML = err;
+            }
+            try {
+                if (inpDob == "") throw "DOB cannot be empty"
+                if (age<=13) throw "Hello Kid! You are too young for this"
+                if (inpDob != "") throw ""
+            }
+            catch (err) {
+                document.getElementById('dErr').innerHTML = err;
+            }
+            try {
+                if (inpSel == "") throw "Please select to proceed"
+                if (inpSel != "") throw ""
+            }
+            catch (err) {
+                document.getElementById('sErr').innerHTML = err;
+            }
+
+        }
+    </script>
+</body>
+
+</html>

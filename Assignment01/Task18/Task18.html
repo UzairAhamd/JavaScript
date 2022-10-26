@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Task18</title>
+</head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+    $(document).ready(function(){
+        $("button").click(function(){
+            $("#sel2").val($("#sel1").val());
+        });
+    });
+</script>
+<body>
+    <div id="mainDiv" style="padding: 20px;margin: 0px auto;max-width: 500px;">
+        <select id="sel1" style="width: 100%;">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+        </select>
+        <button>Add Box</button>
+        <select id="sel2" style="width: 100%;">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+        </select>
+    </div>
+</body>
+</html>

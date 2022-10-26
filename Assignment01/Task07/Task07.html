@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Task07</title>
+    <link rel="stylesheet" href="Task07.css">
+</head>
+
+<body>
+    <div id="counter">
+        <h1>Counter</h1>
+    </div>
+    <div id="display">
+        <input type="number" id="num" placeholder="0">
+        <button id="add" onclick="document.getElementById('res').innerHTML=Add()">ADD</button>
+        <button id="sub" onclick="document.getElementById('res').innerHTML= Subtract()">SUBTRACT</button>
+        <p>Result: <span id="res"></span></p>
+    </div>
+    <script>
+        var num,res;
+        function Add(){
+            num=parseInt(document.getElementById('num').value);
+            res=num+10;
+            return res;
+        }
+        function Subtract(){
+            num=parseInt(document.getElementById('num').value);
+            res=num-10;
+            return res;
+        }
+    </script>
+</body>
+</html>
