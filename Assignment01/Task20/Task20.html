@@ -1,31 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <title>Task20</title>
 </head>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script>
-    $(document).ready(function(){
-        $("button").click(function(){
-            if($("#c1").prop("checked")){
-                $("#mainDiv").remove($("#c1"));
-                console.log("Checkbox is checked.");
+    $(document).ready(function () {
+        $("button").click(function () {
+            if ($("#in1").prop("checked")) {
+                $("#c1").empty();
+            }
+            if ($("#in2").prop("checked")) {
+                $("#c2").empty();
+            }
+            if ($("#in3").prop("checked")) {
+                $("#c3").empty();
+            }
+            if ($("#in4").prop("checked")) {
+                $("#c4").empty();
             }
         });
     });
 </script>
+
 <body>
     <div id="mainDiv" style="padding: 20px;margin: 0px auto;max-width: 500px;">
-        <button>Delete</button>
-        <input type="checkbox" id="c1">
-        <label for="c1">first</label>
-        <input type="checkbox" id="c2">
-        <label for="c2">second</label>
-        <input type="checkbox" id="c3">
-        <label for="c3">third</label>
-        <input type="checkbox" id="c4">
-        <label for="c4">fourth</label>
+        <div>
+            <button>Delete</button>
+        </div>
+
+        <div id="c1">
+            <input type="checkbox" id="in1">
+            <label for="in1">first</label>
+        </div>
         
+        <div id="c2">
+            <input type="checkbox" id="in2">
+            <label for="in2">second</label>
+        </div>
+        
+        <div id="c3">
+            <input type="checkbox" id="in3">
+            <label for="in3">third</label>
+        </div>
+        
+        <div id="c4">
+            <input type="checkbox" id="in4">
+            <label for="in4">fourth</label>
+        </div>
     </div>
 </body>
+
 </html>

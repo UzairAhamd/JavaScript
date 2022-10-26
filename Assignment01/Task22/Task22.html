@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Task22</title>
+    <link rel="stylesheet" href="Task22.css">
+    <style>
+        .divClass {
+            height: 40px;
+            width: 200px;
+            border: 1px solid blue;
+            color: white
+        }
+    </style>
+</head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+
+<body>
+    <div id="mainDiv" style="padding: 20px;margin: 0px auto;max-width: 500px;">
+
+        <div>
+            <input type="text" id="inp">
+            <button onclick="addDiv()">Add Box</button>
+        </div>
+               
+    </div>
+    <script>
+        function addDiv() {
+            $(document).ready(function() {
+  
+                var object = {
+                    id: "divID",
+                    class: "divClass",
+                    css: {
+                        "color": "Red"
+                    }
+                };
+                var txt=$("#inp").val();
+                var addition = $("<div>", object);
+                addition.html(txt);
+                $("#mainDiv").append(addition);
+                $("#inp").val('');
+            });
+        }
+    </script>
+</body>
+
+</html>

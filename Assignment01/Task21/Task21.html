@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Task21</title>
+</head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $("#txt1").attr('disabled', 'disabled');
+        $("#txt2").attr('disabled', 'disabled');
+
+        $("#in1").click(function(){
+            $("#txt1").removeAttr('disabled');
+            console.log("txt1 checked")
+        });
+
+        $("#in2").click(function(){
+            $("#txt2").removeAttr('disabled');
+            console.log("txt2 checked")
+        });
+    });
+</script>
+
+<style>
+    input {
+        height: 30px;
+    }
+
+    input[type="checkbox"] {
+        width: 50px;
+    }
+</style>
+
+<body>
+    <div id="mainDiv" style="padding: 20px;margin: 0px auto;max-width: 500px;">
+
+        <div id="c1">
+            <input type="checkbox" id="in1">
+            <input type="text" id="txt1">
+        </div>
+
+        <div id="c2">
+            <input type="checkbox" id="in2">
+            <input type="text" id="txt2">
+        </div>
+
+    </div>
+</body>
+
+</html>
