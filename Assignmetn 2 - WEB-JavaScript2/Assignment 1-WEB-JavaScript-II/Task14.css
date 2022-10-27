@@ -1,0 +1,36 @@
+
+body{
+    font-family: calibri;
+}
+#append{
+    background-color:rgb(179, 21, 21) ;
+    color:white; 
+    font-size: 20px;
+      padding: 15px 20px;
+       border: none;
+        border-radius: 10px;
+}
+#before{
+    background-color:rgb(250, 205, 7) ;
+    color:rgb(0, 0, 0); 
+     font-size: 20px;
+      padding: 15px 20px;
+       border: none;
+        border-radius: 10px;
+}
+#after{
+    background-color:rgb(15, 138, 80) ;
+    color:white; 
+    font-size: 20px;
+      padding: 15px 20px;
+       border: none;
+        border-radius: 10px;
+}
+#prepend{
+    background-color:rgb(7, 153, 250) ;
+    color:rgb(255, 255, 255); 
+     font-size: 20px;
+      padding: 15px 20px;
+       border: none;
+        border-radius: 10px;
+}

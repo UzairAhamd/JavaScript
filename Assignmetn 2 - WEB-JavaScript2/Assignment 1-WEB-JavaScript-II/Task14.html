@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Task14</title>
+    <link rel="stylesheet" href="Task14.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("#append").click(function(){
+    $("#mainDiv").append(" <p>Append</p>");
+  });
+  $("#before").click(function(){
+    $("#mainDiv").before(" <p>Before</p>");
+  });
+  $("#after").click(function(){
+    $("#mainDiv").after(" <p>After</p>");
+  });
+  $("#prepend").click(function(){
+    $("#mainDiv").prepend(" <p>Prepend</p>");
+  });
+});
+</script>
+</head>
+<body>
+    <span>
+        <button id="append">Append</button>
+        <button id="before">Before</button>
+        <button id="after">After</button>
+        <button id="prepend">Prepend</button>
+    </span>
+    <div id="mainDiv" style="padding: 20px;">
+        <p>This is the main Div</p>
+    </div>
+</body>
+</html>
