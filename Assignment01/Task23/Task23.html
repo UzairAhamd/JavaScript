@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Task23</title>
+</head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<script>
+    $(document).ready(function () {
+        $("#cDim").click(function(){
+            $(".divClass").animate({
+                left: '250px',
+                width: '400px',
+                height: '400px'
+            },5000);
+        })
+        $("#stop").click(function(){
+            $(".divClass").stop();
+        })
+        $("#reset").click(function(){
+            $(".divClass").removeAttr('style');
+        })
+        
+    });
+</script>
+
+<style>
+    .divClass {
+        background-color: blue;
+        height: 100px;
+        width: 100px;
+        border: 1px solid blue;
+        color: white;
+        margin-top: 30px;
+    }
+
+    button {
+        height: 40px;
+        font-size: large;
+    }
+</style>
+
+
+<body>
+    <div id="mainDiv">
+        <button id="cDim">Change Dimensions</button>
+        <button id="stop">Stop</button>
+        <button id="reset">Reset</button>
+    </div>
+    <div class="divClass">
+
+    </div>
+    
+</body>
+
+</html>
