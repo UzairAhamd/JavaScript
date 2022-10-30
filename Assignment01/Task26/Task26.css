@@ -1,0 +1,52 @@
+.newClass{
+    font-size: xx-large;
+    font-weight: bold;
+    background-color: blueviolet;
+}
+.header{
+    margin: 0px auto;
+    max-width: 600px;
+}
+.header button{
+    font-size: larger;
+    height: 50px;
+    margin-left: 15px;
+    border: 4px solid blueviolet;
+    border-radius: 6px;
+}
+.mainDiv{
+    margin: 0px auto;
+    max-width: 600px;
+}
+.mainDiv div{
+    margin: 20px auto;
+    font-size: x-large;
+}
+.d1Class{
+    text-align: center;
+    border: 6px solid black;
+    background-color: aqua;
+}
+.d2Class{
+    text-align: center;
+    border: 6px solid black;
+    background-color: burlywood;
+}
+.d3Class{
+    text-align: center;
+    border: 6px solid black;
+    background-color: gray;
+}
+.d4Class{
+    border: 6px solid black;
+    background-color: lightcoral;
+}
+.d4Class button{
+    display: block;
+    height: 50px;
+    font-size: large;
+}
+.d4Class input{
+    height: 30px;
+    width: 30px;
+}

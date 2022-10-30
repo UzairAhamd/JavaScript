@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Task26</title>
+    <link rel="stylesheet" href="Task26.css">
+</head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<script>
+    $(document).ready(function () {
+        $("#sCss").click(function () {
+            $("#div1").css("background-color","green");
+        })
+        $("#addCl").click(function () {
+            $("#div2").addClass("newClass");
+        })
+        $("#rClass").click(function () {
+            $("#div2").removeClass("newClass");
+        })
+        $("#toggle").click(function(){
+            $("#div2").toggleClass("newClass");
+        })
+        $("#copy").click(function(){
+            if($("#cBox").prop("checked")==true){
+                $("#div3").addClass("d4Class");
+            }
+        })
+
+    });
+</script>
+
+<body>
+    <div>
+        <div class="header">
+            <button id="sCss">Set CSS</button>
+            <button id="addCl">Add Class</button>
+            <button id="rClass">Remove Class</button>
+            <button id="toggle">Toggle Class</button>
+        </div>
+        <div class="mainDiv">
+            <div id="div1" class="d1Class">
+                <p>We will use this DIV to verify "Set Class"!</p>
+            </div>
+            <div id="div2" class="d2Class">
+                <p>We will use this DIV to verify "Add Class" "Remove Class" "Toggle Classs"!</p>
+            </div>
+            <div id="div3" class="d3Class">
+                <p>We copy the class of below DIV here</p>
+            </div>
+            <div id="div4" class="d4Class">
+                <p>We will copy the CSS of this class to DIV above!</p>
+                <label for="cBox">Check To Copy CSS</label>
+                <input type="checkbox" id="cBox">
+                <button id="copy">Copy CSS</button>
+            </div>
+        </div>
+    </div>
+
+
+
+</body>
+
+</html>
