@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Task25</title>
+    <link rel="stylesheet" href="Task25.css">
+</head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<script>
+    $(document).ready(function () {
+        $("#sDown").click(function () {
+            $("#fbForm").slideDown('slow');
+        })
+        $("#sUp").click(function () {
+            $("#fbForm").slideUp('slow');
+        })
+        $("#toggle").click(function () {
+            $("#fbForm").slideToggle('slow');
+        })
+        $("#submit").click(function(){
+            $("#fbForm").hide();
+            $("#show").show();
+        })
+        $("#show").click(function(){
+            $("#show").hide();
+            $("#fbForm").show();
+        })
+
+    });
+</script>
+
+<body>
+    <div id="mainDiv">
+        <div class="header">
+            <h1>Click the buttons to slide up/down</h1>
+            <button id="sUp">Slide Up</button>
+            <button id="sDown">Slide Down</button>
+            <button id="toggle">Toggle Slide</button>
+            <button id="show">Show Feedback Form</button>
+        </div>
+        <div class="form" id="fbForm">
+            <h1>Feedback Form</h1>
+            <label for="mail">Employee ID</label>
+            <input type="email" id="mail">
+            <label for="fBack">FeedBack</label>
+            <textarea id="fBack" cols="30" rows="10"></textarea>
+            <div id="checkB">
+                <input type="checkbox" id="cBox">
+                <label for="cBox">Was this helpful?</label>
+            </div>
+            <button id="submit">Submit</button>
+        </div>
+    </div>
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,45 @@
+.header {
+    margin: 0px auto;
+    max-width: 500px;
+    background-color: lightslategray;
+    color: black;
+}
+
+.form {
+    margin: 0px auto;
+    max-width: 500px;
+    background-color: gray;
+    color: black;
+    display: none;
+}
+
+.form label {
+    display: block;
+    font-size: larger;
+    font-weight: bold;
+    margin: 10px 0px;
+}
+
+.form input[type="email"] {
+    width: 99%;
+    height: 40px;
+    font-size: larger;
+}
+#checkB label{
+    display: inline;
+}
+.form input[type="checkbox"] {
+    height: 20px;
+    width: 20px;
+}
+.form textarea{
+    width: 99%;
+    font-size: larger;
+}
+button{
+    font-size: larger;
+    height: 50px;
+}
+#show{
+    display: none;
+}
