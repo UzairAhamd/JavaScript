@@ -1,0 +1,10 @@
+.secDiv{
+    text-align: center;
+    margin-top: 20px;
+    width: 100px;
+    height: 40px;
+    padding: 10px 10px;
+    background-color: yellow;
+    color: black;
+    font-size: large;
+}

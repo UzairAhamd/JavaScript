@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Task22</title>
+    <link rel="stylesheet" href="Task22.css">
+</head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+
+<body>
+    <div style="padding: 20px;margin: 0px auto;max-width: 500px;">
+        <input type="text" id="inp">
+        <button>Add Box</button>
+    </div>
+    <div id="mainDiv" style="padding: 20px;margin: 0px auto;max-width: 500px;">
+
+    </div>
+    <script>
+        $(document).ready(function () {
+
+            $('button').click(function () {
+                if ($("#inp").val() !== '') {
+                    $(".secDiv").css({ "background-color": "blue", "color": "white" })
+                    $("#mainDiv").append('<div class="secDiv">' + $("#inp").val() + '</div>');
+                    $("#inp").val('');
+                }
+
+            })
+            $("#inp").keypress(function (key) {
+                if (key.which == '13') {
+                    if ($("#inp").val() !== '') {
+                        $(".secDiv").css({ "background-color": "blue", "color": "white" })
+                        $("#mainDiv").append('<div class="secDiv">' + $("#inp").val() + '</div>');
+                        $("#inp").val('');
+                    }
+                }
+            });
+
+        });
+    </script>
+</body>
+
+</html>
